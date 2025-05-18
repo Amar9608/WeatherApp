@@ -1,0 +1,141 @@
+/* General Styling */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #1e1e1e;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Weather Section */
+.weather-section {
+    flex: 2;
+    color:color(from color srgb r g b);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
+    background-image: url("Assets/bg.jpg");
+}
+
+
+.temperature {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.location {
+    font-size: 2rem;
+}
+
+.date {
+    font-size: 1.7rem;
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+.weather-condition {
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    flex: 1.5;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("Assets/bg2.jpg");
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+    
+    
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    color: black;
+    /* border: none; */
+    border-radius: 7px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 10px;
+    background: orange;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.locations li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.locations li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.weather-details {
+    margin-top: 20px;
+}
+
+.weather-details h3 {
+    font-size: 1.5rem;
+}
+
+.weather-details p {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .weather-section {
+        height: 60vh;
+    }
+    .sidebar {
+        height: 40vh;
+    }
+}
